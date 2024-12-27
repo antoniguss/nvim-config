@@ -110,7 +110,7 @@ return {
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
           map('[d', function()
-            vim.diagnostic.goto_next { float = { border = 'rounded' } }
+            vim.diagnostic.goto_prev { float = { border = 'rounded' } }
             -- vim.diagnostic.open_float {
             --   border = 'rounded',
             -- }
