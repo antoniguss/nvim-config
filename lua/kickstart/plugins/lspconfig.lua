@@ -1,6 +1,16 @@
 -- LSP Plugins
 return {
   {
+    {
+      'ray-x/lsp_signature.nvim',
+      event = 'VeryLazy',
+      opts = {},
+      config = function(_, opts)
+        require('lsp_signature').setup(opts)
+      end,
+    },
+  },
+  {
     -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
     -- used for completion, annotations and signatures of Neovim apis
     'folke/lazydev.nvim',
@@ -120,6 +130,7 @@ return {
             vim.diagnostic.goto_next { float = { border = 'rounded' } }
           end, 'Next [D]iagnostic')
 
+          -- map('<C-k>', vim.lsp.buf.signature_help, 'Signature help', { 'i' })
           -- The following two autocommands are used to highlight references of the
           -- word under your cursor when your cursor rests there for a little while.
           --    See `:help CursorHold` for information about when this is executed
