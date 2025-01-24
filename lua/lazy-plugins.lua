@@ -25,6 +25,8 @@ require('lazy').setup({
   -- include a plugin definition from file lua/path/name.lua
   --
 
+  -- require 'kickstart.plugins.typr',
+
   require 'kickstart.plugins.oil',
 
   require 'kickstart.plugins.barbecue',
@@ -64,6 +66,7 @@ require('lazy').setup({
   require 'kickstart.plugins.lint',
 
   require 'kickstart.plugins.debug',
+
   require 'kickstart.plugins.refactor',
   -- require 'kickstart.plugins.indent_line',
 

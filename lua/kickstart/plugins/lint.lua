@@ -9,7 +9,7 @@ return {
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
       -- instead set linters_by_ft like this:
       lint.linters_by_ft = lint.linters_by_ft or {}
-      lint.linters_by_ft['markdown'] = { 'markdownlint' }
+      -- lint.linters_by_ft['markdown'] = { 'markdownlint' }
       lint.linters_by_ft['golang'] = { 'golangcilint' }
       --
       -- However, note that this will enable a set of default linters,

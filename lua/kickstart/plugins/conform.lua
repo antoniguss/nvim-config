@@ -34,6 +34,7 @@ return {
       formatters_by_ft = {
         lua = { 'stylua' },
         go = { 'gofmt' },
+        sql = { 'sql-formatter' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
