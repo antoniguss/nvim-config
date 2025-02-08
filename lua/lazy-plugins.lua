@@ -25,7 +25,7 @@ require('lazy').setup({
   -- include a plugin definition from file lua/path/name.lua
   --
 
-  -- require 'kickstart.plugins.typr',
+  require 'kickstart.plugins.typr',
 
   require 'kickstart.plugins.oil',
 
