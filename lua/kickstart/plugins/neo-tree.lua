@@ -17,7 +17,7 @@ return {
     popup_border_style = 'rounded',
     filesystem = {
       window = {
-        position = 'float',
+        position = 'right',
         mappings = {
           ['\\'] = 'close_window',
         },

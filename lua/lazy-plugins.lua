@@ -27,6 +27,8 @@ require('lazy').setup({
 
   require 'kickstart.plugins.typr',
 
+  require 'kickstart.plugins.tmux',
+
   require 'kickstart.plugins.oil',
 
   require 'kickstart.plugins.barbecue',
@@ -41,7 +43,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/trouble',
 
-  require 'kickstart/plugins/gitsigns',
+  require 'kickstart/plugins/git',
 
   require 'kickstart/plugins/which-key',
 
