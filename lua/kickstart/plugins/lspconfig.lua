@@ -125,10 +125,7 @@ return {
 
       -- Automatically install specified language servers
       local ensure_installed = vim.tbl_keys(servers)
-      vim.list_extend(ensure_installed, {
-        'stylua', -- Lua formatter
-        'sql-formatter',
-      })
+      vim.list_extend(ensure_installed, {})
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
