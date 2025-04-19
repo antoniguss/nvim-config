@@ -10,95 +10,45 @@
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
+  -- Core functionality
+  require 'kickstart.plugins.which-key',
+  require 'kickstart.plugins.colorscheme',
+  require 'kickstart.plugins.mini',
 
-  -- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-
-  -- NOTE: Plugins can also be added by using a table,
-  -- with the first argument being the link and the following
-  -- keys can be used to configure plugin behavior/loading/etc.
-  --
-  -- Use `opts = {}` to force a plugin to be loaded.
-  --
-
-  -- modular approach: using `require 'path/name'` will
-  -- include a plugin definition from file lua/path/name.lua
-  --
-
-  require 'kickstart.plugins.typr',
-
-  require 'kickstart.plugins.tmux',
-
+  -- File management
+  require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.oil',
+  require 'kickstart.plugins.telescope',
 
+  -- Git integration
+  require 'kickstart.plugins.git',
+
+  -- Language support
+  require 'kickstart.plugins.lspconfig',
+  require 'kickstart.plugins.treesitter',
+  require 'kickstart.plugins.cmp',
+  require 'kickstart.plugins.conform',
+  require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.rust',
+  require 'kickstart.plugins.golang',
+
+  -- UI enhancements
   require 'kickstart.plugins.barbecue',
+  require 'kickstart.plugins.todo-comments',
+  require 'kickstart.plugins.trouble',
 
-  require 'kickstart.plugins.wakatime',
-
+  -- Development tools
+  require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.refactor',
   require 'kickstart.plugins.leetcode',
 
+  -- Integration
+  require 'kickstart.plugins.tmux',
+  require 'kickstart.plugins.wakatime',
+  require 'kickstart.plugins.typr',
   require 'kickstart.plugins.persistance',
-
   require 'kickstart.plugins.snacks',
-
-  require 'kickstart/plugins/trouble',
-
-  require 'kickstart/plugins/git',
-
-  require 'kickstart/plugins/which-key',
-
-  -- require 'kickstart/plugins/telescope',
-
-  require 'kickstart/plugins/lspconfig',
-
-  require 'kickstart/plugins/conform',
-
-  require 'kickstart/plugins/cmp',
-
-  require 'kickstart/plugins/colorscheme',
-
-  require 'kickstart/plugins/todo-comments',
-
-  require 'kickstart/plugins/mini',
-
-  require 'kickstart/plugins/treesitter',
-
-  require 'kickstart.plugins.neo-tree',
-
-  require 'kickstart.plugins.lint',
-
-  require 'kickstart.plugins.debug',
-
-  require 'kickstart.plugins.refactor',
-  -- require 'kickstart.plugins.indent_line',
-
-  require 'kickstart.plugins.autopairs',
-
-  require 'kickstart.plugins.rust',
-
-  -- require 'kickstart.plugins.golang',
-
-  -- require 'kickstart.plugins.flash',
-  -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
-  -- init.lua. If you want these files, they are in the repository, so you can just download them and
-  -- place them in the correct locations.
-
-  -- NOTE: Next step on your Neovim journey: Add/Configure additional plugins for Kickstart
-  --
-  --  Here are some example plugins that I've included in the Kickstart repository.
-  --  Uncomment any of the lines below to enable them (you will need to restart nvim).
-  --
-
-  -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-  --    This is the easiest way to modularize your config.
-  --
-  --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- { import = 'custom.plugins' },
-  --
-  -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
-  -- Or use telescope!
-  -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
-  -- you can continue same window with `<space>sr` which resumes last telescope search
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
