@@ -74,6 +74,8 @@ require('lazy').setup({
 
   require 'kickstart.plugins.autopairs',
 
+  require 'kickstart.plugins.rust',
+
   -- require 'kickstart.plugins.golang',
 
   -- require 'kickstart.plugins.flash',
