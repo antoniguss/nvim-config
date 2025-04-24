@@ -55,13 +55,13 @@ return {
       end,
       desc = 'Command History',
     },
-    {
-      '<leader>n',
-      function()
-        Snacks.picker.notifications()
-      end,
-      desc = 'Notification History',
-    },
+    -- {
+    --   '<leader>n',
+    --   function()
+    --     Snacks.picker.notifications()
+    --   end,
+    --   desc = 'Notification History',
+    -- },
     {
       '<leader>e',
       function()
@@ -308,7 +308,7 @@ return {
     {
       '<leader>sp',
       function()
-        Snacks.picker.lazy()
+        Snacks.picker.files { cwd = '~/projects' }
       end,
       desc = 'Search for Plugin Spec',
     },
@@ -420,13 +420,13 @@ return {
       end,
       desc = 'Select Scratch Buffer',
     },
-    {
-      '<leader>n',
-      function()
-        Snacks.notifier.show_history()
-      end,
-      desc = 'Notification History',
-    },
+    -- {
+    --   '<leader>n',
+    --   function()
+    --     Snacks.notifier.show_history()
+    --   end,
+    --   desc = 'Notification History',
+    -- },
     {
       '<leader>bd',
       function()
