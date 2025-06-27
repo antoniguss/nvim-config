@@ -56,7 +56,7 @@ require('lazy').setup({
   require 'kickstart.plugins.wakatime', -- Time tracking
   require 'kickstart.plugins.typr', -- Typing statistics
   require 'kickstart.plugins.persistance', -- Session management
-  require 'kickstart.plugins.snacks', -- Quick actions
+  
 }, {
   ui = {
     -- Icons for the lazy.nvim UI
