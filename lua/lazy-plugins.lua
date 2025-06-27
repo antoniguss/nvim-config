@@ -1,8 +1,8 @@
 -- [[ Plugin Configuration ]]
 --
 -- This file manages all plugins using lazy.nvim
--- Plugins are organized by category and loaded from their respective files
--- in lua/kickstart/plugins/
+-- Plugins are organized by category and loaded from their respective folders
+-- in lua/plugins/
 --
 -- Commands:
 --   :Lazy     - View plugin status
@@ -12,51 +12,51 @@
 require('lazy').setup({
   -- ===== Core Functionality =====
   -- Essential plugins that provide core features
-  require 'kickstart.plugins.which-key', -- Key binding hints
-  require 'kickstart.plugins.colorscheme', -- Theme
-  require 'kickstart.plugins.mini', -- Collection of minimal plugins
+  require 'plugins.ui.which-key', -- Key binding hints
+  require 'plugins.ui.colorscheme', -- Theme
+  require 'plugins.editor.mini', -- Collection of minimal plugins
 
   -- ===== File Management =====
   -- Tools for navigating and managing files
-  require 'kickstart.plugins.neo-tree', -- File explorer
-  require 'kickstart.plugins.oil', -- File operations
-  require 'kickstart.plugins.telescope', -- Fuzzy finder
+  require 'plugins.navigation.neo-tree', -- File explorer
+  require 'plugins.editor.oil', -- File operations
+  require 'plugins.navigation.telescope', -- Fuzzy finder
 
   -- ===== Git Integration =====
   -- Git-related functionality
-  require 'kickstart.plugins.git', -- Git commands and status
+  require 'plugins.git.git', -- Git commands and status
 
   -- ===== Language Support =====
   -- Language-specific features and LSP
-  require 'kickstart.plugins.lspconfig', -- LSP configuration
-  require 'kickstart.plugins.treesitter', -- Syntax highlighting
-  require 'kickstart.plugins.cmp', -- Code completion
-  require 'kickstart.plugins.conform', -- Code formatting
-  require 'kickstart.plugins.lint', -- Linting
-  require 'kickstart.plugins.autopairs', -- Auto-pairing
-  require 'kickstart.plugins.rust', -- Rust support
-  require 'kickstart.plugins.golang', -- Go support
+  require 'plugins.lang.lspconfig', -- LSP configuration
+  require 'plugins.lang.treesitter', -- Syntax highlighting
+  require 'plugins.completion.cmp', -- Code completion
+  require 'plugins.editor.conform', -- Code formatting
+  require 'plugins.lang.lint', -- Linting
+  require 'plugins.completion.autopairs', -- Auto-pairing
+  require 'plugins.lang.rust', -- Rust support
+  require 'plugins.lang.golang', -- Go support
+  require 'plugins.lang.markdown', -- Markdown rendering
 
   -- ===== UI Enhancements =====
   -- Visual improvements and UI elements
-  require 'kickstart.plugins.barbecue', -- Breadcrumbs
-  require 'kickstart.plugins.todo-comments', -- Todo highlights
-  require 'kickstart.plugins.trouble', -- Diagnostics viewer
-  require 'kickstart.plugins.markdown', -- Markdown rendering
+  require 'plugins.ui.barbecue', -- Breadcrumbs
+  require 'plugins.ui.todo-comments', -- Todo highlights
+  require 'plugins.ui.trouble', -- Diagnostics viewer
 
   -- ===== Development Tools =====
   -- Tools for development workflow
-  require 'kickstart.plugins.debug', -- Debugging
-  require 'kickstart.plugins.refactor', -- Code refactoring
-  require 'kickstart.plugins.leetcode', -- Leetcode integration
+  require 'plugins.debug.debug', -- Debugging
+  require 'plugins.editor.refactor', -- Code refactoring
+  require 'plugins.lang.leetcode', -- Leetcode integration
 
   -- ===== Integration =====
   -- External tool integrations
-  require 'kickstart.plugins.tmux', -- Tmux integration
-  require 'kickstart.plugins.wakatime', -- Time tracking
-  require 'kickstart.plugins.typr', -- Typing statistics
-  require 'kickstart.plugins.persistance', -- Session management
-  require 'kickstart.plugins.snacks', -- Quick actions
+  require 'plugins.ui.tmux', -- Tmux integration
+  require 'plugins.editor.wakatime', -- Time tracking
+  require 'plugins.editor.typr', -- Typing statistics
+  require 'plugins.editor.persistance', -- Session management
+  require 'plugins.editor.snacks', -- Quick actions
 }, {
   ui = {
     -- Icons for the lazy.nvim UI
@@ -77,5 +77,3 @@ require('lazy').setup({
     },
   },
 })
-
--- vim: ts=2 sts=2 sw=2 et

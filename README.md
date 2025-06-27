@@ -1,55 +1,31 @@
-# My Neovim Configuration
+# Neovim Configuration
 
-A modular Neovim configuration built on top of kickstart.nvim, organized for easy maintenance and customization.
+This is a highly modular and organized Neovim configuration, built upon the kickstart.nvim project. It aims to provide a clean, efficient, and extensible development environment.
 
 ## Features
 
-- Modular plugin management with lazy.nvim
-- Language Server Protocol (LSP) support
-- Advanced code completion
-- File navigation with telescope and neo-tree
-- Git integration
-- Syntax highlighting with treesitter
-- And more...
-
-## Structure
-
-```
-.
-├── lua/
-│   ├── lazy-plugins.lua    # Plugin configurations
-│   ├── keymaps.lua         # Key mappings
-│   ├── options.lua         # Neovim options
-│   ├── kickstart/          # Core plugin configurations
-│   └── custom/             # Custom configurations
-└── init.lua                # Main entry point
-```
+- **Modular Structure**: Plugin configurations are organized into functional categories (e.g., `completion`, `debug`, `editor`, `git`, `lang`, `navigation`, `ui`) for better maintainability and readability.
+- **Lazy Loading**: Utilizes `lazy.nvim` for efficient plugin management and lazy loading, ensuring fast startup times.
+- **Language Support**: Comprehensive support for various programming languages, including Go, Rust, Python, and more, with integrated LSP, linting, and formatting.
+- **Enhanced UI**: Improved user interface with breadcrumbs, diagnostics viewer, and custom keybinding hints.
+- **Development Tools**: Integrated debugging, refactoring, and other development-focused tools.
 
 ## Installation
 
-1. Backup your existing Neovim configuration:
-```bash
-mv ~/.config/nvim ~/.config/nvim.bak
-```
+1.  **Clone the repository**:
 
-2. Clone this repository:
-```bash
-git clone https://github.com/antoniguss/nvim-config.git ~/.config/nvim
-```
+    ```bash
+    git clone https://github.com/your-username/your-nvim-config.git ~/.config/nvim
+    ```
 
-3. Start Neovim and let lazy.nvim install the plugins:
-```bash
-nvim
-```
+2.  **Launch Neovim**:
 
-## Customization
+    Open Neovim. `lazy.nvim` will automatically install all the necessary plugins.
 
-- Add new plugins in `lua/lazy-plugins.lua`
-- Configure plugin settings in `lua/kickstart/plugins/`
-- Add custom configurations in `lua/custom/`
-- Modify keymaps in `lua/keymaps.lua`
+## Usage
 
-## License
+Refer to the `lua/keymaps.lua` file for a list of custom keybindings.
 
-MIT License - See [LICENSE.md](LICENSE.md) for details
+## Contributing
 
+Feel free to open issues or pull requests to improve this configuration.
