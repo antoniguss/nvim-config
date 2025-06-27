@@ -97,7 +97,21 @@ return {
         for type, icon in pairs(signs) do
           diagnostic_signs[vim.diagnostic.severity[type]] = icon
         end
-        vim.diagnostic.config { signs = { text = diagnostic_signs } }
+        vim.diagnostic.config {
+          virtual_text = false,
+          signs = { text = diagnostic_signs },
+          underline = true,
+          update_in_insert = false,
+          severity_sort = true,
+        }
+      else
+        vim.diagnostic.config {
+          virtual_text = false,
+          signs = true,
+          underline = true,
+          update_in_insert = false,
+          severity_sort = true,
+        }
       end
 
       -- Create capabilities with nvim-cmp
