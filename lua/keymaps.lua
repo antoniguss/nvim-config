@@ -34,6 +34,14 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Telescope keymaps
+vim.keymap.set('n', '<leader><space>', function() require('telescope.builtin').find_files() end, { desc = 'Find files' })
+vim.keymap.set('n', '<leader>,', function() require('telescope.builtin').buffers() end, { desc = 'Switch buffer' })
+vim.keymap.set('n', '<leader>/', function() require('telescope.builtin').live_grep() end, { desc = 'Live Grep' })
+
+-- Terminal toggle
+vim.keymap.set('n', '<leader>t', '<cmd>toggleterm<CR>', { desc = 'Toggle Terminal' })
+
 -- Refactoring keymaps (commented out)
 -- vim.keymap.set('x', '<leader>re', function()
 --   require('refactoring').refactor 'Extract Function'

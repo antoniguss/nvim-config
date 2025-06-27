@@ -52,11 +52,7 @@ require('lazy').setup({
 
   -- ===== Integration =====
   -- External tool integrations
-  require 'plugins.ui.tmux', -- Tmux integration
-  require 'plugins.editor.wakatime', -- Time tracking
-  require 'plugins.editor.typr', -- Typing statistics
-  require 'plugins.editor.persistance', -- Session management
-  require 'plugins.editor.snacks', -- Quick actions
+  
 }, {
   ui = {
     -- Icons for the lazy.nvim UI
