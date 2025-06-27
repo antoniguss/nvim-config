@@ -18,9 +18,7 @@ require('lazy').setup({
 
   -- ===== File Management =====
   -- Tools for navigating and managing files
-  require 'kickstart.plugins.neo-tree', -- File explorer
   require 'kickstart.plugins.oil', -- File operations
-  require 'kickstart.plugins.telescope', -- Fuzzy finder
 
   -- ===== Git Integration =====
   -- Git-related functionality
