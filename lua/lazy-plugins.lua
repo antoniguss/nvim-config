@@ -37,6 +37,7 @@ require('lazy').setup({
   require 'plugins.lang.rust', -- Rust support
   require 'plugins.lang.golang', -- Go support
   require 'plugins.lang.markdown', -- Markdown rendering
+  require 'plugins.lang.typescript', -- Typescript support
 
   -- ===== UI Enhancements =====
   -- Visual improvements and UI elements
