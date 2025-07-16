@@ -43,6 +43,7 @@ require('lazy').setup({
   -- Visual improvements and UI elements
   require 'plugins.ui.barbecue', -- Breadcrumbs
   require 'plugins.ui.todo-comments', -- Todo highlights
+  require 'plugins.ui.tmux',
   require 'plugins.ui.trouble', -- Diagnostics viewer
 
   -- ===== Development Tools =====
@@ -53,7 +54,6 @@ require('lazy').setup({
 
   -- ===== Integration =====
   -- External tool integrations
-  
 }, {
   ui = {
     -- Icons for the lazy.nvim UI
@@ -74,3 +74,4 @@ require('lazy').setup({
     },
   },
 })
+
