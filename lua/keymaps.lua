@@ -10,6 +10,15 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>de', '<cmd>lua vim.diagnostic.enable()<cr>')
+vim.keymap.set('n', '<leader>dd', '<cmd>lua vim.diagnostic.disable()<cr>')
+vim.keymap.set('n', '<leader>dt', function()
+  if vim.diagnostic.is_enabled() then
+    vim.diagnostic.enable(false)
+  else
+    vim.diagnostic.enable()
+  end
+end)
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -35,9 +44,15 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Telescope keymaps
-vim.keymap.set('n', '<leader><space>', function() require('telescope.builtin').find_files() end, { desc = 'Find files' })
-vim.keymap.set('n', '<leader>,', function() require('telescope.builtin').buffers() end, { desc = 'Switch buffer' })
-vim.keymap.set('n', '<leader>/', function() require('telescope.builtin').live_grep() end, { desc = 'Live Grep' })
+vim.keymap.set('n', '<leader><space>', function()
+  require('telescope.builtin').find_files()
+end, { desc = 'Find files' })
+vim.keymap.set('n', '<leader>,', function()
+  require('telescope.builtin').buffers()
+end, { desc = 'Switch buffer' })
+vim.keymap.set('n', '<leader>/', function()
+  require('telescope.builtin').live_grep()
+end, { desc = 'Live Grep' })
 
 -- Terminal toggle
 vim.keymap.set('n', '<leader>t', '<cmd>toggleterm<CR>', { desc = 'Toggle Terminal' })
@@ -70,6 +85,5 @@ vim.keymap.set('n', '<leader>t', '<cmd>toggleterm<CR>', { desc = 'Toggle Termina
 --   require('refactoring').refactor 'Extract Block To File'
 -- end)
 -- Extract block supports only normal mode
-
 
 -- vim: ts=2 sts=2 sw=2 et

@@ -20,8 +20,17 @@ return {
         position = 'right',
         mappings = {
           ['\\'] = 'close_window',
+          ['O'] = 'system_open',
         },
       },
+    },
+    commands = {
+      system_open = function(state)
+        local node = state.tree:get_node()
+        local path = node:get_id()
+        -- macOs: open file in default application in the background.
+        vim.fn.jobstart({ 'open', path }, { detach = true })
+      end,
     },
   },
 }

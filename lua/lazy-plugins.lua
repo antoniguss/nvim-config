@@ -51,6 +51,7 @@ require('lazy').setup({
   require 'plugins.debug.debug', -- Debugging
   require 'plugins.editor.refactor', -- Code refactoring
   require 'plugins.lang.leetcode', -- Leetcode integration
+  require 'plugins.editor.wakatime',
 
   -- ===== Integration =====
   -- External tool integrations
@@ -74,4 +75,3 @@ require('lazy').setup({
     },
   },
 })
-
