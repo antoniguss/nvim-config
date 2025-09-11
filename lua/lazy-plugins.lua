@@ -38,6 +38,7 @@ require('lazy').setup({
   require 'plugins.lang.golang', -- Go support
   require 'plugins.lang.markdown', -- Markdown rendering
   require 'plugins.lang.typescript', -- Typescript support
+  require 'plugins.lang.csharp', -- C# support
 
   -- ===== UI Enhancements =====
   -- Visual improvements and UI elements
