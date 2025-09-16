@@ -25,6 +25,7 @@ require('lazy').setup({
   -- ===== Git Integration =====
   -- Git-related functionality
   require 'plugins.git.git', -- Git commands and status
+  require 'plugins.git.github_actions', -- pipeline.nvim to display CI/CD pipelines in nvim
 
   -- ===== Language Support =====
   -- Language-specific features and LSP

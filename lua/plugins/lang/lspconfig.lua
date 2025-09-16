@@ -123,8 +123,8 @@ return {
         clangd = {},
         gopls = {},
         pyright = {},
-        tsserver = {},
-        csharp_ls = {},
+        ts_ls = {},
+        -- csharp_ls = {},
         lua_ls = {
           settings = {
             Lua = {
@@ -141,7 +141,6 @@ return {
 
       -- Automatically install specified language servers
       local ensure_installed = vim.tbl_keys(servers)
-      vim.list_extend(ensure_installed, { 'prettierd', 'eslint_d', 'csharpier' })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
